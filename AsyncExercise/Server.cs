@@ -6,7 +6,8 @@ namespace AsyncExercise
     public class Server
     {
 
-        /* Return [amount] random numbers between [min] and [max] inclusive */
+        /* Return [amount] random numbers between [min] and [max] inclusive 
+         through the callback [cb] */
         public void GetNumbers(int amount, int min, int max, ICallback cb)
         {
             var t = new Thread(() => DoTheRealStuff(amount, min, max, cb) );
